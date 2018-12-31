@@ -1,0 +1,108 @@
+﻿@model WebApplication15.Models.FlightReport
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Flight</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.flightNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.flightNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.aircrafttype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.aircrafttype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.Departure_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.Departure_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.Arrival_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.Arrival_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.currentflight.flight_capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.currentflight.flight_capacity)
+        </dd>
+
+    </dl>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Flight Numer")
+        </th>
+        <th>
+            @Html.Label("First Name")
+        </th>
+        <th>
+            @Html.Label("Last Name ")
+        </th>
+        <th>
+            @Html.Label("Email")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.customer_list)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.flight.flightNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+
+            </tr>}
+   </table>
+          <p>
+
+                @Html.ActionLink("Back to List", "Index")
+            </p>

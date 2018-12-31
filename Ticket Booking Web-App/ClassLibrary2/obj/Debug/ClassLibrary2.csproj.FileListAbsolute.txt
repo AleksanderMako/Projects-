@@ -1,0 +1,12 @@
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\amako\source\repos\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.pdb
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\bin\Debug\ClassLibrary2.dll
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\bin\Debug\ClassLibrary2.pdb
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.dll
+C:\Users\amako\Desktop\project so far\WebApplication15\ClassLibrary2\obj\Debug\ClassLibrary2.pdb

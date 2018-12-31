@@ -1,0 +1,14 @@
+﻿body {
+    background-image: url(../Pictures/airlinelufthansa.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-size:large;
+}
+
+html {
+    height: 100%
+}
+a.my-class {
+    color:black;
+}

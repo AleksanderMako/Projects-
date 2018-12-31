@@ -1,0 +1,113 @@
+﻿@model WebApplication15.Models.Boarding_pass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@if (ViewBag.seat != null)
+{
+    <h1>@ViewBag.seat</h1>
+}
+@if (ViewBag.row != null)
+{
+    <h1>@ViewBag.row</h1>
+}
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.current_customer.flight.flightNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_customer.flight.flightNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.current_customer.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_customer.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.current_customer.Last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_customer.Last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.current_customer.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.current_customer.email)
+        </dd>
+       
+       
+
+    </dl>
+</div>
+<table class="table">
+    <tr>
+    <th>@Html.Label("flightNumber")
+        </th>
+        <th>
+            @Html.Label("location")
+    </th>
+        <th>
+            @Html.Label("destination")
+    </th>
+        <th>
+            @Html.Label("aircraft type ")
+    </th>
+        <th>
+            @Html.Label("departure ")
+        </th>
+        <th>
+            @Html.Label("arival  ")
+        </th>
+        <th>
+            @Html.Label("Seat Row  ")
+        </th>
+        <th>
+            @Html.Label("Seat   ")
+        </th>
+        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.flightNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.location)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.aircrafttype)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.Departure_date)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.thisflight.Arrival_date)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.seat_of_the_customer.row)
+        <td>
+            @Html.DisplayFor(model => model.seat_of_the_customer.seatLetter)
+        </td>
+        
+    </tr>
+
+    </table>
+<p>
+  
+    @Html.ActionLink("Back to List", "Index")
+</p>

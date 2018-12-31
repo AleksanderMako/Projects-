@@ -1,0 +1,86 @@
+﻿@model WebApplication15.Models.flightmodelfortheview
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+       @Html.Label("Type the date departure date  separated by slashes")
+        <div class="col-md-10">
+            @Html.TextBox("departure", null, new { @class = "form-control datepicker" ,type="date"})
+  </div>
+    </div>
+
+
+
+
+<div class="col-md-offset-2 col-md-10">
+    <input type="submit" value="Filter" class="btn btn-default" />
+</div>
+
+
+
+
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.flightNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.aircrafttype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.Departure_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fl.Arrival_date)
+        </th>
+        <th>@Html.DisplayNameFor(model=>model.fl.flight_capacity)</th>
+    </tr>
+
+@foreach (var item in Model.flightlist) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.flightNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.aircrafttype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departure_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arrival_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flight_capacity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id },new { @class="my-class"}) |
+            @Html.ActionLink("View Report", "Details", new { id=item.Id  },new { @class = "my-class" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }, new { @class = "my-class" })
+        </td>
+    </tr>
+}
+
+</table>

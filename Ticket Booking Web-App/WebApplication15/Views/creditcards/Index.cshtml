@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication15.Models.creditcard>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Credit Card Form </h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.email_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.creditcard_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cvc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Card_Holder)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.creditcard_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cvc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Card_Holder)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

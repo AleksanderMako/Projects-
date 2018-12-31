@@ -1,0 +1,56 @@
+﻿@model WebApplication15.Models.creditcard
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>creditcard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.email_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.creditcard_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.creditcard_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cvc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cvc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Card_Holder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Card_Holder)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

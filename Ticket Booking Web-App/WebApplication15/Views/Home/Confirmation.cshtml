@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (ViewBag.grant != null)
+{
+
+    <h3>@ViewBag.grant</h3>
+
+}
+<link href="~/Stylesheet/StyleSheet.css" rel="stylesheet">
+<div class="jumbotron">
+   
+    </div>
+
+<h1>Welcome to Aubg Airlines Admin </h1>
+@using (Html.BeginForm())
+{<div class="form-group">
+   
+    <div class="col-md-10">
+        @Html.Label("Security pass code ")
+        @Html.TextBox("code", null, new { @class = "form-control datepicker" })
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Ok" class="btn btn-default" />
+    </div>
+</div>}
+
+
+
+<div class="col-md-10 ">
+<ol class="list-group">
+    <li class="list-group-item">Without Admin access,checking fligths is possible and booking one as well </li>
+    <li class="list-group-item">At first try accessing the links related to seats, all customers and making more flights,you can't you need admin access </li>
+    <li class="list-group-item">Try entering a wrong name or string in the box to fire up the exception  </li>
+    <li class="list-group-item">For Admin access type in the box stoilov  and click ok </li>
+    <li class="list-group-item">Now you can make more flights more seats and view all customers booked in the database</li>
+    <li class="list-group-item">Next to each customer there are 3 links the middle one generates the boarding pass </li>
+    <li class="list-group-item">You can filter flights based on their departures  with the drop down </li>
+    <li class="list-group-item">Credit Cards will not accept numbers with less than 16 digits and CVC wont accept numbers with more than 3 digits</li>
+    
+    </ol>
+</div>

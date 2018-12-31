@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication15.Models.Seats>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.row)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.seatLetter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idoftheCustomer)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.seatcapacity)</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.row)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seatLetter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idoftheCustomer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.seatcapacity)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

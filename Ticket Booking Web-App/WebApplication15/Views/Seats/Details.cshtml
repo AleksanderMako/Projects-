@@ -1,0 +1,42 @@
+﻿@model WebApplication15.Models.Seats
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Seats</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.row)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.row)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.seatLetter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.seatLetter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idoftheCustomer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idoftheCustomer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
